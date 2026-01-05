@@ -37,7 +37,7 @@ body {
 .nav-bar {
     background-color: #115e59;
     position: fixed;
-    top: 60px;
+    top: 90px;
     left: 0;
     right: 0;
     width: 100%;
@@ -201,7 +201,7 @@ body {
 <body>
 
 <div class="top-bar">
-    <h2>Letícia Alcântara | Fisioterapia</h2>
+    <h2>Letícia Alcântara | </h2>
 </div>
 
 <div class="nav-bar">
