@@ -12,27 +12,40 @@
         color: #333;
         padding-top: 90px;
     }
+    
+body {
+    overflow-x: hidden;
+}
 
-    /* BARRA SUPERIOR – NOME DO SITE */
-    .top-bar {
-        background-color: #0f766e;
-        color: #fff;
-        padding: 15px 20px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1001;
-        text-align: left;
-    }
+/* BARRA SUPERIOR – NOME DO SITE */
+.top-bar {
+    background-color: #0f766e;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100vw;
+    z-index: 1001;
+    text-align: left;
+    box-sizing: border-box;
+}
 
-    /* BARRA INFERIOR – MENU */
-    .nav-bar {
-        background-color: #115e59;
-        position: fixed;
-        top: 60px;
-        width: 100%;
-        z-index: 1000;
-    }
+/* BARRA INFERIOR – MENU */
+.nav-bar {
+    background-color: #115e59;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100vw;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
 
     .nav-bar nav {
         display: flex;
