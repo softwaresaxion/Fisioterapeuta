@@ -353,7 +353,7 @@ body.dark section h2 {
 
 <section id="contato" class="contato">
     <h2>Contato</h2>
-    <p>📍 Recife - PE</p>
+    <p>📍 São Lourenço da Mata - PE</p>
     <p>📞 (81) 98632-1182</p>
     <p>📧 contato@fisioterapiasaude.com</p>
     <br>
