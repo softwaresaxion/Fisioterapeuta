@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -6,18 +6,24 @@
 <title>Letícia Alcântara | Fisioterapeuta</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #f4f6f8;
-        color: #333;
-        padding-top: 90px;
-    }
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
 
-/* BARRA SUPERIOR – NOME DO SITE */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    padding-top: 130px;
+    overflow-x: hidden;
+}
+
+/* ===== BARRA SUPERIOR ===== */
 .top-bar {
     background-color: #0f766e;
     color: #fff;
@@ -25,159 +31,90 @@
     position: fixed;
     top: 0;
     width: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    text-align: left;
+    z-index: 1002;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* BARRA INFERIOR – MENU */
+/* ===== MENU ===== */
 .nav-bar {
     background-color: #115e59;
     position: fixed;
-    top: 50px;
+    top: 60px;
     width: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    z-index: 1001;
 }
 
-    .nav-bar nav {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        padding:0;
-    }
+.nav-bar nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
-    .nav-bar nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 80px 20px 4px;
-        touch-action: manipulation;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+.nav-bar nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .nav-bar nav a .icone {
-        font-size: 20px;
-        line-height: 1;
-    }
+.nav-bar nav a:hover {
+    opacity: 0.8;
+}
 
-    .nav-bar nav a .texto {
-        font-size: 14px;
-        margin-top: 10px;
-        text-align: center;
-    }
+/* ===== SEÇÕES ===== */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+    scroll-margin-top: 150px;
+    transition: all 0.4s ease;
+}
 
-    .nav-bar nav a:hover {
-        opacity: 0.8;
-    }
+.hero {
+    background: linear-gradient(to right, #0f766e, #14b8a6);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
 
-    section {
-        padding: 60px 20px;
-        max-width: 1100px;
-        margin: auto;
-        scroll-margin-top: 150px;
-    }
+/* ===== BOTÃO ===== */
+.btn {
+    background-color: #fff;
+    color: #0f766e;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
 
-    .hero {
-        background: linear-gradient(to right, #0f766e, #14b8a6);
-        color: white;
-        padding: 80px 20px;
-        text-align: center;
-    }
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
 
-    .hero h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
+/* ===== CARD ===== */
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
 
-    .hero p {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
+.card:hover {
+    transform: translateY(-5px);
+}
 
-    .btn {
-        background-color: #fff;
-        color: #0f766e;
-        padding: 15px 30px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-    }
-
-    section h2 {
-        text-align: center;
-        margin-bottom: 40px;
-        color: #0f766e;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-
-    .card {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    .card h3 {
-        margin-bottom: 15px;
-        color: #0f766e;
-    }
-
-    .sobre {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        align-items: center;
-    }
-
-    .sobre img {
-        max-width: 250px;
-        border-radius: 12px;
-    }
-
-    .contato {
-        text-align: center;
-    }
-
-    .contato p {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .carrossel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .carrossel img {
-        width: 100%;
-        max-width: 350px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    }
-
-    footer {
-        background-color: #0f766e;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-    }
-
-  .foto-sobre {
+/* ===== FOTO SOBRE ===== */
+.foto-sobre {
     display: flex;
     justify-content: center;
     margin: 30px 0;
@@ -188,33 +125,45 @@
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-  /* ===== BOTÃO TEMA ===== */
-.top-bar {
-    box-sizing: border-box;
+/* ===== CARROSSEL ===== */
+.carrossel img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
 }
 
-.toggle-theme {
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.4s ease;
+/* ===== BUSCA ===== */
+.busca-container {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
 }
 
-.toggle-theme.rotate {
-    transform: rotate(180deg);
+.busca-container input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
-/* ===== TRANSIÇÕES SUAVES ===== */
-body,
-.top-bar,
-.nav-bar,
-footer,
-.card,
-section h2 {
-    transition: background-color 0.4s ease, color 0.4s ease;
+/* ===== SUPORTE ===== */
+.suporte {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.suporte h3 {
+    margin-bottom: 20px;
+}
+
+.suporte a {
+    display: inline-block;
+    margin: 10px;
 }
 
 /* ===== TEMA ESCURO ===== */
@@ -225,170 +174,94 @@ body.dark {
 
 body.dark .top-bar,
 body.dark .nav-bar,
-body.dark footer {
-    background-color: #020617;
-}
-
-body.dark .card {
+body.dark footer,
+body.dark .card,
+body.dark .suporte {
     background-color: #020617;
     color: #e5e7eb;
 }
 
-body.dark section h2 {
-    color: #5eead4;
-}
-
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
+/* ===== FOOTER ===== */
+footer {
+    background-color: #0f766e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="top-bar"> <h2> Letícia Alcântara|Fisioterapeuta</h2> <span class="toggle-theme" id="toggleTheme">☀️</span> </div>
+<div class="top-bar">
+    <h2>Letícia Alcântara | Fisioterapeuta</h2>
+    <span id="toggleTheme" style="font-size:24px;cursor:pointer;">☀️</span>
+</div>
 
 <div class="nav-bar">
     <nav>
-        <a href="#sobre">
-            <span class="icone">👩‍⚕️</span>
-            <span class="texto">Sobre</span>
-        </a>
-        <a href="#servicos">
-            <span class="icone">🏥</span>
-            <span class="texto">Serviços</span>
-        </a>
-        <a href="#contato">
-            <span class="icone">📞</span>
-            <span class="texto">Contato</span>
-        </a>
+        <a href="#sobre">👩‍⚕️<span>Sobre</span></a>
+        <a href="#servicos">🏥<span>Serviços</span></a>
+        <a href="#contato">📞<span>Contato</span></a>
+        <a href="#suporte">🛠️<span>Suporte</span></a>
     </nav>
 </div>
 
 <section class="hero">
     <h1>Cuidado, movimento e qualidade de vida</h1>
     <p>Atendimento fisioterapêutico humanizado e personalizado</p>
-    <a class="btn" href="https://wa.me/5581986321182?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento%20de%20fisioterapia." target="_blank">
-        Agendar pelo WhatsApp
-    </a>
+    <a class="btn" href="https://wa.me/5581986321182" target="_blank">Agendar pelo WhatsApp</a>
 </section>
 
 <section>
-    <h2>Galeria de Atendimento</h2>
-    <div class="carrossel">
-
-        <img id="imagemCarrossel" src="https://ortotraumasamaritano.com.br/wp-content/uploads/2023/03/10-Fisioterapia-Ortopedica.jpg" alt="Fisioterapia">
-
+    <h2>Pesquisar serviços</h2>
+    <div class="busca-container">
+        <input type="text" id="busca" placeholder="Digite o nome do serviço...">
     </div>
-</section>
-
-<section id="sobre">
-    <h2>Sobre a fisioterapeuta</h2>
-
-    <div class="foto-sobre">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/306865982_632671525229479_6977420807138106493_n.webp?stp=dst-jpg_e35_tt6&_nc_cat=108&ig_cache_key=MjkyNzg3MDM0MDkzMzEyNjU0Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ0MC5zZHIuZGVmYXVsdF9pbWFnZS5DMyJ9&_nc_ohc=0JATniwozH8Q7kNvwFVXDEv&_nc_oc=Adly1pmx5roICpEyCHJIq__htzo3sqpywK4HqajjSs9YUPYIXC4BtVuYwvxHSSvofvaDyc2ZT-P0qaFlkATfFeir&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&_nc_gid=BU1jIK0VTvzGuVFBrOMjkQ&oh=00_AfprViIOouTjKdKmQJ3jEYWWhp48J-CdPP2xFzutSUGCvQ&oe=695F9D1D" alt="Fisioterapeuta Letícia Alcântara">
-    </div>
-
-    <p>
-        Sou fisioterapeuta, com <strong>pós-graduação em Fisioterapia Dermatofuncional</strong> e
-        <strong>formação completa em Fisioterapia Neurofuncional</strong>, registrada no
-        <strong>CREFITO nº 326382-F</strong>.
-    </p>
-
-    <p>
-        Realizo <strong>atendimento exclusivamente domiciliar</strong>, oferecendo um cuidado
-        humanizado, seguro e personalizado, respeitando as necessidades e os objetivos de cada paciente.
-    </p>
-
-    <p>
-        Meu trabalho é focado em promover <strong>reabilitação, funcionalidade e qualidade de vida</strong>,
-        sempre com ética, atenção individual e acompanhamento contínuo.
-    </p>
 </section>
 
 <section id="servicos">
     <h2>Serviços</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Fisioterapia Ortopédica</h3>
-            <p>Tratamento de dores, lesões musculares e articulares.</p>
-        </div>
-
-        <div class="card">
-            <h3>Fisioterapia Pós-operatória</h3>
-            <p>Recuperação funcional após cirurgias.</p>
-        </div>
-
-        <div class="card">
-            <h3>Reabilitação Funcional</h3>
-            <p>Melhora da mobilidade, força e qualidade de vida.</p>
-        </div>
-
-        <div class="card">
-            <h3>Atendimento Domiciliar</h3>
-            <p>Conforto e segurança no atendimento em casa.</p>
-        </div>
+    <div class="grid" id="listaServicos">
+        <div class="card">Fisioterapia Ortopédica</div>
+        <div class="card">Fisioterapia Pós-operatória</div>
+        <div class="card">Reabilitação Funcional</div>
+        <div class="card">Atendimento Domiciliar</div>
     </div>
 </section>
 
-<section>
-    <h2>Diferenciais</h2>
-    <div class="grid">
-        <div class="card">✔ Atendimento humanizado</div>
-        <div class="card">✔ Avaliação individual</div>
-        <div class="card">✔ Profissional qualificada</div>
-        <div class="card">✔ Resultados comprovados</div>
-    </div>
-</section>
+<section id="suporte">
+    <h2>Suporte</h2>
+    <div class="suporte">
+        <h3>Precisa de ajuda com o app?</h3>
+        <p>Entre em contato com nosso suporte técnico pelos canais abaixo:</p>
 
-<section id="contato" class="contato">
-    <h2>Contato</h2>
-    <p>📍 Recife - PE</p>
-    <p>📞 (81) 98632-1182</p>
-    <p>📧 contato@fisioterapiasaude.com</p>
-    <br>
-    <a class="btn" href="https://wa.me/5581986321182?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20atendimentos." target="_blank">
-        Falar no WhatsApp
-    </a>
+        <a class="btn" href="https://wa.me/5581985184913" target="_blank">WhatsApp Suporte</a>
+        <a class="btn" href="mailto:softwaresaxion@gmail.com">E-mail Suporte</a>
+
+        <p style="margin-top:20px;">
+            Utilize o menu para navegar entre as telas.  
+            A barra de pesquisa permite localizar serviços rapidamente.  
+            O botão de tema alterna entre modo claro e escuro.
+        </p>
+    </div>
 </section>
 
 <footer>
     <p>© 2026 - Fisioterapia Saúde | Todos os direitos reservados</p>
 </footer>
 
-  <script>
-    const toggle = document.getElementById("toggleTheme");
-
-    toggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        toggle.classList.toggle("rotate");
-        toggle.textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
-    });
-</script>
-  
 <script>
-    const imagens = [
-        "https://ortotraumasamaritano.com.br/wp-content/uploads/2023/03/10-Fisioterapia-Ortopedica.jpg",
-        "https://estaticos.animaeducacao.com.br/medias/20251103150112/como-e-o-curso-de-fisioterapia.webp",
-        "https://estaticos.animaeducacao.com.br/medias/20250514152316/-_Imagem_-_O_que_%C3%A9_Fisioterapia_Entenda_sobre_a_profiss%C3%A3o.webp"
-    ];
+document.getElementById("toggleTheme").onclick = () => {
+    document.body.classList.toggle("dark");
+};
 
-    let index = 0;
-
-    function avancar() {
-        index = (index + 1) % imagens.length;
-        document.getElementById("imagemCarrossel").src = imagens[index];
-    }
-
-    function voltar() {
-        index = (index - 1 + imagens.length) % imagens.length;
-        document.getElementById("imagemCarrossel").src = imagens[index];
-    }
-
-    setInterval(avancar, 2000);
+document.getElementById("busca").addEventListener("input", function() {
+    const termo = this.value.toLowerCase();
+    document.querySelectorAll("#listaServicos .card").forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(termo) ? "block" : "none";
+    });
+});
 </script>
 
 </body>
